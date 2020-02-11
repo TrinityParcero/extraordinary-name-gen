@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/char.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:300,500,900" rel="stylesheet">
+    <title>Random Characters</title>
+</head>
+    
+<body>
+    <script src="char.js"></script>
+    <div id="header">
+        <h1>The Extraordinary</h1>
+        <h1>Generator of Characters</h1>
+    <p id = "name">With all the official stuff I could find!
+    </p>
+        <a href = "../index.html"><img src = "../images/home.png" alt = "home icon" height = "50px" width = "50px" id = "homeIcon"></a>
+    </div>
+    
+    <div id="content">
+    <div id = "dropDowns">
+        
+    <!-- RACE -->
+    <button class = "accordion"> Race</button>
+    <div class = "panel">
+        
+    <p>include all races?</p>
+        <button class = "allButton">
+        select all
+        </button>
+    <fieldset>
+            
+        <input type = "checkbox" id = "race1" name = "race">
+        <label for = "race1">Eladrin</label>
+          
+        <input type = "checkbox" id = "race2" name = "race">
+        <label for = "race2">Gith</label>
+            
+        <input type = "checkbox" id = "race3" name = "race">
+        <label for = "race3">Centaur</label>
+            
+        <input type = "checkbox" id = "race4" name = "race">
+        <label for = "race4">Minotaur</label>
+            
+        <input type = "checkbox" id = "race5" name = "race">
+        <label for = "race5">Dragonborn</label>
+            
+        <input type = "checkbox" id = "race6" name = "race">
+        <label for = "race6">Dwarf</label>
+            
+        <input type = "checkbox" id = "race7" name = "race">
+        <label for = "race7">Elf</label>
+           
+        <input type = "checkbox" id = "race8" name = "race">
+        <label for = "race8">Aarakocra</label>
+            
+        <input type = "checkbox" id = "race9" name = "race">
+        <label for = "race9">Genasi</label>
+            
+        <input type = "checkbox" id = "race10" name = "race">
+        <label for = "race10">Goliath</label>
+            
+        <input type = "checkbox" id = "race11" name = "race">
+        <label for = "race11">Gnome</label>
+            
+        <input type = "checkbox" id = "race12" name = "race">
+        <label for = "race12">Changeling</label>
+            
+        <input type = "checkbox" id = "race13" name = "race">
+        <label for = "race13">Shifter</label>
+            
+         <input type = "checkbox" id = "race14" name = "race">
+         <label for = "race14">Warforged</label>
+          
+         <input type = "checkbox" id = "race15" name = "race">
+         <label for = "race15">Halfling</label>
+        
+         <input type = "checkbox" id = "race16" name = "race">
+         <label for = "race16">Half-Orc</label>
+        
+         <input type = "checkbox" id = "race17" name = "race">
+         <label for = "race17">Tiefling</label>
+        
+         <input type = "checkbox" id = "race18" name = "race">
+         <label for = "race18">Human</label>
+        
+         <input type = "checkbox" id = "race19" name = "race">
+         <label for = "race19">Half-Elf</label>
+        
+         <input type = "checkbox" id = "race20" name = "race">
+         <label for = "race20">Merfolk</label>
+            
+    </fieldset>
+        
+    </div>
+        
+    <!-- CLASS -->
+    <button class = "accordion">
+    Class</button>
+    <div class = "panel">
+        <p>include all classes?</p>
+        <button class = "allButton">
+        select all
+        </button>
+        <fieldset>
+            
+        <input type = "checkbox" id = "class1" name = "class">
+        <label for = "class1">Barbarian</label>
+          
+        <input type = "checkbox" id = "class2" name = "class">
+        <label for = "class2">Bard</label>  
+            
+        <input type = checkbox id = "class3" name = "class">
+        <label for = "class3">Cleric</label>
+            
+        <input type = "checkbox" id = "class4" name = "class">
+        <label for = "class4">Druid</label>
+            
+        <input type = "checkbox" id = "class5" name = "class">
+        <label for = "class5">Fighter</label>
+            
+        <input type = "checkbox" id = "class6" name = "class">
+        <label for = "class6">Monk</label>
+            
+        <input type = "checkbox" id = "class7" name = "class">
+        <label for = "class7">Paladin</label> 
+            
+        <input type = "checkbox" id = "class8" name = "class">
+        <label for = "class8">Ranger</label>
+            
+        <input type = "checkbox" id = "class9" name = "class">
+        <label for = "class9">Rogue</label>
+            
+        <input type = "checkbox" id = "class10" name = "class">
+        <label for = "class10">Sorcerer</label>
+            
+        <input type = "checkbox" id = "class11" name = "class">
+        <label for = "class11">Warlock</label>
+            
+        <input type = "checkbox" id = "class12" name = "class">
+        <label for = "class12">Wizard</label>
+            
+        <input type = "checkbox" id = "class13" name = "class">
+        <label for = "class13">Mystic</label>
+            
+        <input type = "checkbox" id = "class14" name = "class">
+        <label for = "class14">Artificer</label>
+            
+        <input type = "checkbox" id = "class15" name = "class">
+        <label for = "class15">Blood Hunter</label>
+            
+        </fieldset>
+    </div>    
+    
+    <!-- BACKGROUND -->
+    <button class = "accordion">
+    Background</button>
+    <div class = "panel">
+        <p>include all backgrounds?</p>
+        <button class = "allButton">
+        select all
+        </button>
+        
+        <fieldset>
+        
+        <input type = "checkbox" id = "bg1" name = "bg">
+        <label for = "bg1">Acolyte</label>
+            
+        <input type = "checkbox" id = "bg2" name = "bg">
+        <label for = "bg2">Charlatan</label>
+            
+        <input type = "checkbox" id = "bg3" name = "bg">
+        <label for = "bg3">City Watch</label>
+            
+        <input type = "checkbox" id = "bg4" name = "bg">
+        <label for = "bg4">Courtier</label>
+            
+        <input type = "checkbox" id = "bg5" name = "bg">
+        <label for = "bg5">Criminal</label>
+            
+        <input type = "checkbox" id = "bg6" name = "bg">
+        <label for = "bg6">Entertainer</label>
+            
+        <input type = "checkbox" id = "bg7" name = "bg">
+        <label for = "bg7">Faction Agent</label>
+            
+        <input type = "checkbox" id = "bg8" name = "bg">
+        <label for = "bg8">Far Traveler</label>
+        
+        <input type = "checkbox" id = "bg9" name = "bg">
+        <label for = "bg9">Folk Hero</label>
+            
+        <input type = "checkbox" id = "bg10" name = "bg">
+        <label for = "bg10">Guild Artisan</label>
+            
+        <input type = "checkbox" id = "bg11" name = "bg">
+        <label for = "bg11">Guild Merchant</label>
+            
+        <input type = "checkbox" id = "bg12" name = "bg">
+        <label for = "bg12">Haunted One</label>
+           
+        <input type = "checkbox" id = "bg13" name = "bg">
+        <label for = "bg13">Hermit</label>
+            
+        <input type = "checkbox" id = "bg14" name = "bg">
+        <label for = "bg14">Inheritor</label>
+            
+        <input type = "checkbox" id = "bg15" name = "bg">
+        <label for = "bg15">Noble</label>
+            
+        <input type = "checkbox" id = "bg16" name = "bg">
+        <label for = "bg16">Outlander</label>
+        
+        <input type = "checkbox" id = "bg17" name = "bg">
+        <label for = "bg17">Sage</label>
+            
+        <input type = "checkbox" id = "bg18" name = "bg">
+        <label for = "bg18">Sailor</label>
+            
+        <input type = "checkbox" id = "bg19" name = "bg">
+        <label for = "bg19">Soldier</label>
+            
+        <input type = "checkbox" id = "bg20" name = "bg">
+        <label for = "bg20">Urchin</label>
+            
+        </fieldset>
+    </div>
+        
+    <!-- NAME -->
+    <button class = "accordion">
+    Name</button>
+    <div class = "panel">
+        
+    <p>what kinda names?</p>
+    <fieldset>
+        <input type = "checkbox" id = "english" name = "eth" value = "british">
+        <label for = "english">English</label>
+        
+        <input type = "checkbox" id = "mediterranean" name = "eth" value = "mediterranean"> 
+        <label for = "mediterranean">Mediterranean</label>
+        
+        <input type = "checkbox" id= "eastEuropean" name = "eth" value = "eastEuropean">
+        <label for="eastEuropean">East European</label>
+        
+        <input type = "checkbox" id = "european" name = "eth" value = "european">
+        <label for = "european">European</label>
+        
+        <input type = "checkbox" id = "asian" name = "eth" value = "asian">
+        <label for = "asian">Asian</label>
+        
+        <input type = "checkbox" id = "other" name = "eth" value = "other">
+        <label for = "other">Other</label>
+    </fieldset> 
+        
+    <!--gender choice-->
+    <p>what gender names?</p>
+    <fieldset>
+     <input type="radio" id="gender1" name="gender" value="female">
+     <label for="gender1">Female</label>
+        
+    <input type="radio" id="gender2" name="gender" value="male">
+    <label for="gender2">Male</label>
+        
+    <input type="radio" id="gender3" name="gender" value="both">
+    <label for="gender3">Whatever</label>
+    </fieldset>  
+    
+    <!--last name choice-->
+     <p>want last names?</p>
+    <fieldset>
+        <input type="radio" id="last1" name="last" value="true">
+        <label for="last1">Yes</label>
+        <input type="radio" id="last2" name="last" value="false">
+        <label for="last2">No</label>
+    </fieldset>
+           
+    </div>  
+        
+    <!-- ALIGNMENT -->
+    <button class = "accordion">Alignment</button>
+    <div class = "panel">
+        <p>include all alignments?</p>
+        
+        <button class = "allButton">
+        select all
+        </button>
+        
+        <fieldset>
+         
+            <input type = "checkbox" id = "good1" name = "align">
+            <label for = "good1">Lawful Good</label>
+            
+            <input type = "checkbox" id = "good2" name = "align">
+            <label for = "good2">Neutral Good</label>
+            
+            <input type = "checkbox" id = "good3" name = "align">
+            <label for = "good3">Chaotic Good</label>
+            
+            <input type = "checkbox" id = "neutral1" name = "align">
+            <label for = "good4">Lawful Neutral</label>
+            
+            <input type = "checkbox" id = "neutral2" name = "align">
+            <label for = "neutral2">True Neutral</label>
+            
+            <input type = "checkbox" id = "neutral3" name = "align">
+            <label for = "neutral3">Chaotic Neutral</label>
+            
+            <input type = "checkbox" id = "evil1" name = "align">
+            <label for = "evil1">Lawful Evil</label>
+            
+            <input type = "checkbox" id = "evil2" name = "align">
+            <label for = "evil2">Neutral Evil</label>
+            
+            <input type = "checkbox" id = "evil3" name = "align">
+            <label for = "evil3">Chaotic Evil</label>
+            
+        </fieldset>
+    </div>    
+        
+        <div id="generator">
+        <p id = "generated"></p>
+        <button id = "genButton">generate</button>
+        </div>
+        
+    </div><!-- close dropDowns -->
+    </div> <!-- close content -->
+    
+    <div id="footerbar">
+    <p>Trinity Parcero                  2018</p>
+    </div>  
+<!-- JAVASCRIPT -->
+    <script>
+    "use strict";
+    
+    let acc = document.getElementsByClassName("accordion");
+    
+    for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } 
+        else {
+            panel.style.display = "block";
+        }
+    });
+}    
+</script>
+</body>
+</html>
