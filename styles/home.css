@@ -14,7 +14,7 @@ a{
     display: inline-block;
     margin: 10px;
 }
-#header{
+header{
     vertical-align:center;
     margin: 0 auto;
     width: 100%;
@@ -30,7 +30,7 @@ img:hover{
 label{
     font-family: 'Catamaran', sans-serif;
 }
-#header h1{
+header h1{
     color: black;
     margin: 0;
     line-height: 1em;
@@ -76,14 +76,14 @@ button:active{
     color: white;
     border: none;
 }
-#footerbar{
+footer{
     background: black;
     position: fixed;
     top: 92%;
     padding: 5px;
     width: 100%;
 }
-#footerbar p{
+footer p{
     color: white;
     font-size: .8em;
     font-weight: 300;
@@ -102,9 +102,10 @@ button:active{
     h1{
         font-size: 2.5em;
     }
-    #header{
+    header{
         margin: 2%;
     }
     #name{
         font-size: .8em;
     }
+}
