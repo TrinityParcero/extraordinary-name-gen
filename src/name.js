@@ -1,5 +1,3 @@
-const document = require('./index.html');
-
 //generator button
 let genButton = document.getElementById("genButton");
 
@@ -29,11 +27,13 @@ let european = document.querySelector("#europeanAll");
 let asian = document.querySelector("#asianAll");
 let other = document.querySelector("#otherAll");
 
+
 british.addEventListener('click', function () {
     for (let i = 0; i < 5; i++) {
         //0-4
         eths[i].checked = !eths[i].checked;
     }
+    console.log('you clicked a thing');
 });
 
 mediterranean.addEventListener('click', function () {
