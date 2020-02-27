@@ -4,6 +4,54 @@ let genButton = document.getElementById("genButton");
 //generator box
 let genBox = document.getElementById("generator");
 
+const ethBritish = [
+    "Welsh",
+    "Cornish",
+    "English",
+    "Medieval",
+    "Gaelic"
+];
+
+const ethMediterranean = [
+    "Italian",
+    "Greek",
+    "Ancient Greek",
+    "Arabic"
+];
+
+const ethEastEuropean = [
+    "Russian",
+    "Polish",
+    "Hungarian",
+    "Finnish",
+    "Armenian"
+];
+
+const ethEuropean = [
+    "Spanish",
+    "Dutch",
+    "French",
+    "Gaullic",
+    "German",
+    "Norse"
+];
+
+const ethAsian = [
+    "Chinese",
+    "Japanese",
+    "Indian",
+    "Mongolian",
+    "Korean"
+];
+
+const ethMisc = [
+    "African",
+    "Amerindian",
+    "Aboriginal",
+    "Hebrew",
+    "Romani"
+];
+
 //ethnicity and gender values
 let eths = document.querySelectorAll("input[name=eth]");
 let ethsSelected = [];
