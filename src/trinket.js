@@ -1,113 +1,104 @@
-//generator button
-let genButton = document.getElementById("genButton");
-//generator box
-let genBox = document.getElementById("generator");
+let genButton;
+let genBox;
+let generatedText;
 
-//p tag where generated trinkets go
-let p = document.querySelector("#generated");
+let numButtons;
 
-//possible trinkets
-let posTrinkets = [];
+let sources = {};
 
-//selected sources
-let sourceSelected = [];
+let allSourceButton;
 
+let selectedSources;
+let selectedNum;
 
-//num radios
-let nums = document.querySelectorAll("input[name=num]")
-let numSelected;
+let possibleTrinkets = [];
 
-//get all checkboxes
-let phb = document.querySelector("#phb");
-let ee = document.querySelector("#ee");
-let cos = document.querySelector("#cos");
-let llok = document.querySelector("#llok");
+const setUpReferences = () => {
+    genButton = document.getElementById('genButton');
+    genBox = document.getElementById('generator');
+    generatedText = document.querySelector('#generated');
 
-//get all source button
-let sourceAll = document.querySelector("#sourceAll");
+    //onclick of generator button
+    genButton.onclick = () => {
+        //clear old values
+        generatedText.innerHTML = '';
+        selectedSources = [];
+        selectedNum = 0;
 
-//sourceall button function
-sourceAll.addEventListener("click", function () {
-    phb.checked = !phb.checked;
-    ee.checked = !ee.checked;
-    cos.checked = !cos.checked;
-    llok.checked = !llok.checked;
-});
+        setUpSearch();
+        showTrinkets();
+    };
 
-let setUpSearch = function () {
+    numButtons = document.querySelectorAll('input[name=num]');
 
+    sources.phb = document.querySelector('#phb');
+    sources.ee = document.querySelector('#ee');
+    sources.cos = document.querySelector('#cos');
+    sources.llok = document.querySelector('#llok');
+
+    allSourceButton = document.querySelector('#sourceAll');
+    allSourceButton.onclick = () => {
+        for (const source of Object.values(sources)) {
+            source.checked = !source.checked;
+        }
+    };
+};
+
+window.onload = setUpReferences();
+
+const setUpSearch = () => {
     //put checked sources in selected
-    if (phb.checked) {
-        sourceSelected[sourceSelected.length] = (phb.value);
+    for (const source of Object.values(sources)) {
+        if (source.checked) {
+            selectedSources.push(source.value);
+        }
     }
-    if (ee.checked) {
-        sourceSelected[sourceSelected.length] = (ee.value);
-    }
-    if (cos.checked) {
-        sourceSelected[sourceSelected.length] = (cos.value);
-    }
-    if (llok.checked) {
-        sourceSelected[sourceSelected.length] = (llok.value);
-    }
+    console.log(`sources: ${selectedSources}`);
 
-    for (let i = 0; i < sourceSelected.length; i++) {
-        let propName;
-        if (sourceSelected[i] != undefined) {
-            propName = sourceSelected[i];
-            if (trinkets[propName] != undefined) {
-                posTrinkets += (trinkets[propName]);
-            }
-
+    for (let i = 0; i < selectedSources.length; i++) {
+        let propName = selectedSources[i];
+        console.log(propName);
+        if (trinkets[propName] != undefined) {
+            possibleTrinkets.push(...trinkets[propName]);
         }
     }
 
+    for (let i = 0; i < numButtons.length; i++) {
+        if (numButtons[i].checked) {
+            selectedNum = numButtons[i].value;
+            console.log(`number: ${selectedNum}`);
 
-    //go thru nums radio, set checked one as numSelected
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i].checked) {
-            numSelected = nums[i].value;
             //futz with size of genBox
-            if (numSelected == 1) {
-                genBox.style.height = "100px";
+            if (selectedNum == 1) {
+                genBox.style.height = '100px';
             }
-            if (numSelected == 5) {
-                genBox.style.height = "400px";
+            if (selectedNum == 5) {
+                genBox.style.height = '400px';
             }
-            if (numSelected == 10) {
-                genBox.style.minHeight = "600px";
+            if (selectedNum == 10) {
+                genBox.style.minHeight = '700px';
             }
         }
     }
-}
+};
 
 //show the random trinket(s)
-let showTrinkets = function () {
+const showTrinkets = () => {
     let genTrinkets = [];
-    //for numselected, generate trinkets
-    for (let i = 0; i < numSelected; i++) {
-        let rando = Math.floor(Math.random() * Math.floor(posTrinkets.length));
-        while (rando == 0) {
-            rando = Math.floor(Math.random() * Math.floor(posTrinkets.length));
-        }
-        if (posTrinkets[rando] != undefined) {
-            console.log(rando);
-            console.log(posTrinkets[rando]);
-            genTrinkets[i] = posTrinkets[rando];
-            p.innerHTML += (genTrinkets[i] + "<br>" + "<br>");
-        }
 
+    if (!possibleTrinkets.length) {
+        return;
     }
-}
-
-//onclick of generator button
-genButton.addEventListener('click', function () {
-
-    //clear old values
-    p.innerHTML = "";
-    sourceSelected = [];
-    numSelected = 0;
-
-    setUpSearch();
-    loadTrinkets();
-    showTrinkets();
-});
+    for (let i = 0; i < selectedNum; i++) {
+        let rando = Math.floor(Math.random() * Math.floor(possibleTrinkets.length));
+        while (rando == 0) {
+            rando = Math.floor(Math.random() * Math.floor(possibleTrinkets.length));
+        }
+        if (possibleTrinkets[rando] != undefined) {
+            console.log(rando);
+            console.log(possibleTrinkets[rando]);
+            genTrinkets[i] = possibleTrinkets[rando];
+            generatedText.innerHTML += genTrinkets[i] + '<br>' + '<br>';
+        }
+    }
+};
