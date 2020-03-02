@@ -1,6 +1,6 @@
 body {
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 main {
     max-width: 2000px;
@@ -10,21 +10,30 @@ main {
 }
 .block {
     float: left;
-    width: 400px;
-    margin-bottom: 100px;
-    margin-right: 20px;
 }
 .column {
     float: left;
-    width: 400px;
-    margin-right: 20px;
+    width: 800px;
 }
 fieldset {
     text-align: left;
+    height: auto;
     margin-bottom: 20px;
 }
 .column .block {
     margin-bottom: 5px;
+}
+#race,
+#sources,
+#class,
+#background {
+    width: 760px;
+}
+.row .block {
+    height: inherit;
+    width: 300px;
+    float: left;
+    margin-right: 100px;
 }
 .option {
     display: inline-block;
@@ -41,22 +50,19 @@ fieldset {
     font-size: 1.1em;
     line-height: 0.8em;
 }
-
 #generator {
     display: block;
     padding: 10px;
     background-color: black;
-    width: 400px;
+    width: 440px;
     height: 600px;
     float: left;
     top: 10px;
     position: relative;
 }
-#name {
-    width: 180px;
-}
 header #name {
     font-size: 1em;
+    float: none;
     font-family: 'Catamaran', serif;
     text-decoration: overline;
     margin-top: 1px;
@@ -64,6 +70,10 @@ header #name {
     color: black;
     text-align: center;
     width: auto;
+}
+main #name fieldset,
+main #alignment fieldset {
+    width: 300px;
 }
 a {
     text-decoration: none;
@@ -82,6 +92,28 @@ header img {
     bottom: 86%;
     left: 80%;
     display: inline-block;
+}
+.row {
+    width: 800px;
+    height: 400px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+#nameAll,
+#alignmentAll,
+#sourceAll,
+#raceAll,
+#classAll,
+#backgroundAll {
+    bottom: 30px;
+    left: 10px;
+}
+#nameFieldset,
+#alignmentFieldset {
+    height: 380px;
 }
 label {
     font-family: 'Catamaran', sans-serif;
