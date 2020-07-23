@@ -111,7 +111,7 @@ let setUpSearch = function() {
         //check the gender buttons
         if (female.checked) {
             //return eth + Female to firstNames
-            if (ethsSelected[i] != undefined) {
+            if (ethsSelected[i]) {
                 //welsh is a special case
                 //names are unisex
                 if (ethsSelected[i] == 'welsh') {
@@ -124,7 +124,7 @@ let setUpSearch = function() {
         }
         if (male.checked) {
             //return eth + Male to firstNames
-            if (ethsSelected[i] != undefined) {
+            if (ethsSelected[i]) {
                 //welsh is a special case
                 //names are unisex
                 if (ethsSelected[i] == 'welsh') {
@@ -137,11 +137,11 @@ let setUpSearch = function() {
         }
         if (both.checked) {
             //return eth + Female and eth + Male to firstNames
-            if (ethsSelected[i] != undefined && ethsSelected != 'welsh') {
+            if (ethsSelected[i] && ethsSelected != 'welsh') {
                 propName = ethsSelected[i] + 'Female';
                 firstNames += names[propName];
             }
-            if (ethsSelected[i] != undefined && ethsSelected != 'welsh') {
+            if (ethsSelected[i] && ethsSelected != 'welsh') {
                 propName = ethsSelected[i] + 'Male';
                 firstNames += names[propName];
             } else {
@@ -156,10 +156,10 @@ let setUpSearch = function() {
         //check the last name button
         if (last.checked) {
             //return eth + Family to lastNames
-            if (ethsSelected[i] != undefined) {
+            if (ethsSelected[i]) {
                 propName = ethsSelected[i] + 'Family';
                 //not all eths have a family category
-                if (names[propName] != undefined) {
+                if (names[propName]) {
                     lastNames += names[propName];
                 }
             }

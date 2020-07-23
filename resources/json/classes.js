@@ -73,5 +73,5 @@ const classes = {
     wizard: {},
     mystic: {},
     artificer: {},
-    'blood hunter': {}
+    blood hunter: {}
 };
