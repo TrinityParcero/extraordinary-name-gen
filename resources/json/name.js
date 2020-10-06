@@ -1,4 +1,4 @@
-const names = {
+const namesObject = {
     welsh: [
         'Aeaba',
         'Aeffa',
@@ -5864,7 +5864,6 @@ const names = {
         'Yoshihara',
         'Yoshinobu',
         'Yoshizaki',
-        'Yosida',
         'Yunokawa'
     ],
     japaneseMale: [
@@ -6122,8 +6121,7 @@ const names = {
         'Yuu',
         'Yuuki',
         'Yuuta',
-        'Yusuke',
-        'Zenko'
+        'Yusuke'
     ],
     japaneseFemale: [
         'Asuka',
@@ -6660,7 +6658,6 @@ const names = {
         'Go',
         'Gong',
         'Goo',
-        'Gook',
         'Gwak',
         'Gweon',
         'Gyung',

@@ -19,6 +19,7 @@ let male;
 let both;
 let lastNameEnabled;
 
+
 const setUpReferences = () => {
     //last names and number of names
     female = document.getElementById('gender1');
@@ -27,7 +28,7 @@ const setUpReferences = () => {
     lastNameEnabled = document.getElementById('last1');
 
     //select category buttons
-    let english = document.querySelector('#english');
+    let british = document.querySelector('#english');
     let mediterranean = document.querySelector('#mediterranean');
     let eastEuropean = document.querySelector('#eastEuropean');
     let european = document.querySelector('#european');
@@ -58,9 +59,9 @@ const setUpReferences = () => {
 //name strings
 
 //SET UP SEARCH. takes input and figures out what the user actually wants
-let setUpSearch = function() {
+let setUpSearch = function () {
     //go thru checkboxes, add relevant eths to ethsselected
-    if (english.checked) {
+    if (british.checked) {
         ethsSelected.add('welsh');
         ethsSelected.add('cornish');
         ethsSelected.add('english');
@@ -168,7 +169,7 @@ let setUpSearch = function() {
 };
 
 //loads the names in the sections selected
-let loadNames = function() {
+let loadNames = function () {
     //split firstNames by commas, trim off spaces
     if (firstNames.length != 0) {
         firstNames = firstNames.trim();
@@ -182,7 +183,7 @@ let loadNames = function() {
     }
 };
 
-let showNames = function() {
+let showNames = function () {
     let firstName;
     let lastName;
     //generate first name
@@ -206,7 +207,7 @@ let showNames = function() {
 
 //onclick of generator button
 //call name functions
-genButton.addEventListener('click', function() {
+genButton.addEventListener('click', function () {
     //clear old values
     p.innerHTML = '';
     firstNames = [];
