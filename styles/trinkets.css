@@ -26,12 +26,18 @@ img {
     display: inline;
 }
 #generator {
-    display: inline-block;
+    float: left;
     padding: 10px 20px;
     background-color: black;
-    width: 500px;
+    width: 400px;
     min-height: 180px;
     margin-bottom: 100px;
+    margin-top: 40px;
+}
+#num {
+    width: 30%;
+    float: left;
+    padding: 10px 40px;
 }
 #generator p {
     text-align: left;
@@ -46,6 +52,7 @@ img {
 #gen fieldset {
     width: 120px;
     display: inline-block;
+    margin-right: 100px;
 }
 #generated {
     background-color: white;
