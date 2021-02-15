@@ -1,4 +1,4 @@
-### Extraordinary Generator of Things
+# Extraordinary Generator of Things
 
 ## Summary
 
@@ -7,7 +7,7 @@ This is something I've been working on on-and-off since college, started as a ve
 
 ## Summary / Status of Each Tool
 
-# Names
+### Names
 Random name generator taking the bulk of its content from The Extraordinary Book of Names by Gary Gygax. Allows filtering by name origin/culture, and gender.
 
 Status
@@ -18,14 +18,14 @@ Known Issues / Planned Improvements
 - Current implementation is pretty messy code-wise, since I started it very early in my JS learning process. I plan to clean it up by moving to a Node/React structure.
 
 
-# Characters
+### Characters
 Random character generator that lets you tailor result by race, class, etc. 
 
 Status
 - In progress - Icebox. Will be picked up once Node/React redesign of name and trinket generators is complete, as I'll pull components and stuff from those to complete this more cleanly and efficiently.
 
 
-# Trinkets
+### Trinkets
 Random trinket generator that lets you filter by which sourcebooks trinkets are pulled from.
 
 Status
@@ -37,7 +37,7 @@ Known Issues / Planned Improvements
 
 
 
-# Magic Items
+### Magic Items
 Random magic item generator, might be expanded to a general random loot generator?
 
 Status
