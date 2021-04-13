@@ -5,6 +5,7 @@ main {
     max-width: 900px;
     margin: 0 auto;
     vertical-align: middle;
+    padding-bottom: 800px;
 }
 header img {
     position: absolute;
@@ -61,24 +62,6 @@ header {
     height: 40px;
     margin: 10px;
     margin-top: 4px;
-}
-#britishAll {
-    margin-right: 65px;
-}
-#mediterraneanAll {
-    margin-right: 105px;
-}
-#eastEuropeanAll {
-    margin-right: 35px;
-}
-#europeanAll {
-    margin-right: 15px;
-}
-#asianAll {
-    margin-right: 40px;
-}
-#otherAll {
-    margin-right: 15px;
 }
 #gen fieldset {
     margin: 4px;
@@ -155,6 +138,30 @@ footer p {
     margin-top: 0;
 }
 
+.allButton {
+    width: 60px;
+    height: 20px;
+    display: block;
+    font-size: 1em;
+    line-height: 0.8em;
+}
+
+.noneButton {
+    width: 80px;
+    height: 20px;
+    display: block;
+    font-size: 1em;
+    line-height: 0.8em;
+}
+
+.multiButtons {
+    display: inline-block;
+}
+
+.options {
+    display: inline-block;
+}
+
 /* TABLET */
 @media screen and (max-width: 900px) {
     #generator button {
@@ -202,24 +209,24 @@ footer p {
         padding: 0px;
         width: 100px;
     }
-    #britishAll,
-    #mediterraneanAll,
-    #eastEuropeanAll,
-    #europeanAll,
-    #asianAll,
-    #otherAll {
-        margin-right: 0px;
-        margin-left: 0px;
-    }
 
     .allButton {
-        width: 80px;
-        height: 30px;
+        width: 50px;
+        height: 10px;
         display: inline-block;
         margin-left: 20px;
-        margin-right: 40px;
         margin-bottom: 5px;
-        font-size: 1.1em;
+        font-size: 0.8em;
+        line-height: 0.8em;
+    }
+
+    .noneButton {
+        width: 50px;
+        height: 10px;
+        display: inline-block;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        font-size: 0.8em;
         line-height: 0.8em;
     }
 
