@@ -116,7 +116,7 @@ const setUpSearch = () => {
             if (ethsSelected[i]) {
                 //welsh is a special case
                 //names are unisex
-                if (ethsSelected[i] == 'welsh') {
+                if (ethsSelected[i] === 'welsh') {
                     firstNames += names['welsh'];
                 } else {
                     propName = ethsSelected[i] + 'Female';
@@ -129,7 +129,7 @@ const setUpSearch = () => {
             if (ethsSelected[i]) {
                 //welsh is a special case
                 //names are unisex
-                if (ethsSelected[i] == 'welsh') {
+                if (ethsSelected[i] === 'welsh') {
                     firstNames += names['welsh'];
                 } else {
                     propName = ethsSelected[i] + 'Male';
@@ -139,17 +139,17 @@ const setUpSearch = () => {
         }
         if (both.checked) {
             //return eth + Female and eth + Male to firstNames
-            if (ethsSelected[i] && ethsSelected != 'welsh') {
+            if (ethsSelected[i] && ethsSelected !== 'welsh') {
                 propName = ethsSelected[i] + 'Female';
                 firstNames += names[propName];
             }
-            if (ethsSelected[i] && ethsSelected != 'welsh') {
+            if (ethsSelected[i] && ethsSelected !== 'welsh') {
                 propName = ethsSelected[i] + 'Male';
                 firstNames += names[propName];
             } else {
                 //welsh is a special case
                 //names are unisex
-                if (ethsSelected[i] == 'welsh') {
+                if (ethsSelected[i] === 'welsh') {
                     firstNames += names['welsh'];
                 }
             }
@@ -172,12 +172,12 @@ const setUpSearch = () => {
 //loads the names in the sections selected
 let loadNames = function () {
     //split firstNames by commas, trim off spaces
-    if (firstNames.length != 0) {
+    if (firstNames.length !== 0) {
         firstNames = firstNames.trim();
         firstNames = firstNames.split(',');
     }
     //if last.checked, split by commas, trim off spaces
-    if (last.checked && lastNames.length != 0) {
+    if (last.checked && lastNames.length !== 0) {
         console.log(lastNames);
         lastNames = lastNames.trim();
         lastNames = lastNames.split(',');
@@ -199,7 +199,7 @@ let showNames = function () {
 
     //put generated names in generated
 
-    if (lastName != undefined) {
+    if (lastName !== undefined) {
         p.innerHTML += firstName + ' ' + lastName + '<br>';
     } else {
         p.innerHTML += firstName + '<br>';
