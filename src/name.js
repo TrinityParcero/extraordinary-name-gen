@@ -207,7 +207,7 @@ const prepareNameSet = (names) => {
         // check the gender buttons
         if (selectedGender === 'female') {
             //return eth + Female to firstNames
-            if (selectedOrigins[i] != undefined) {
+            if (selectedOrigins[i] !== undefined) {
                 //welsh is a special case
                 //names are unisex
                 if (selectedOrigins[i] === 'welsh') {
@@ -219,7 +219,7 @@ const prepareNameSet = (names) => {
             }
         } else if (selectedGender === 'male') {
             // return eth + Male to firstNames
-            if (selectedOrigins[i] != undefined) {
+            if (selectedOrigins[i] !== undefined) {
                 // welsh is a special case
                 // names are unisex
                 if (selectedOrigins[i] === 'welsh') {
@@ -241,7 +241,7 @@ const prepareNameSet = (names) => {
             } else {
                 //welsh is a special case
                 //names are unisex
-                if (selectedOrigins[i] == 'welsh') {
+                if (selectedOrigins[i] === 'welsh') {
                     validNames.firstNames.push(...names['welsh']);
                 }
             }
@@ -250,10 +250,10 @@ const prepareNameSet = (names) => {
         //check the last name button
         if (lastNameEnabled.checked) {
             //return eth + Family to lastNames
-            if (selectedOrigins[i] != undefined) {
+            if (selectedOrigins[i] !== undefined) {
                 propName = `${selectedOrigins[i]}Family`;
                 //not all eths have a family category
-                if (names[propName] != undefined) {
+                if (names[propName] !== undefined) {
                     validNames.lastNames.push(...names[propName]);
                 }
             }

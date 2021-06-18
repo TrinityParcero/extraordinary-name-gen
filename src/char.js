@@ -13,7 +13,6 @@ let selectedClasses = [];
 
 let firstNames = [];
 let lastNames = [];
-let selectedNameOrigins = [];
 let female;
 let male;
 let both;
@@ -27,13 +26,6 @@ const setUpReferences = () => {
     both = document.getElementById('gender3');
     lastNameEnabled = document.getElementById('last1');
 
-    //select category buttons
-    let british = document.querySelector('#english');
-    let mediterranean = document.querySelector('#mediterranean');
-    let eastEuropean = document.querySelector('#eastEuropean');
-    let european = document.querySelector('#european');
-    let asian = document.querySelector('#asian');
-    let other = document.querySelector('#other');
 
     let raceAllButtons = document.querySelectorAll('input[name=race]');
     let bgAllButtons = document.querySelectorAll('input[name=bg]');
@@ -59,49 +51,58 @@ const setUpReferences = () => {
 //name strings
 
 //SET UP SEARCH. takes input and figures out what the user actually wants
-let setUpSearch = function () {
+const setUpSearch = () => {
+    const ethsSelected = [];
+
     //go thru checkboxes, add relevant eths to ethsselected
+    const british = document.querySelector('#english');
+    const mediterranean = document.querySelector('#mediterranean');
+    const eastEuropean = document.querySelector('#eastEuropean');
+    const european = document.querySelector('#european');
+    const asian = document.querySelector('#asian');
+    const other = document.querySelector('#other');
+
     if (british.checked) {
-        ethsSelected.add('welsh');
-        ethsSelected.add('cornish');
-        ethsSelected.add('english');
-        ethsSelected.add('medieval');
-        ethsSelected.add('gaelic');
+        ethsSelected.push('welsh');
+        ethsSelected.push('cornish');
+        ethsSelected.push('english');
+        ethsSelected.push('medieval');
+        ethsSelected.push('gaelic');
     }
     if (mediterranean.checked) {
-        ethsSelected.add('greek');
-        ethsSelected.add('ancientGreek');
-        ethsSelected.add('arabic');
-        ethsSelected.add('italian');
+        ethsSelected.push('greek');
+        ethsSelected.push('ancientGreek');
+        ethsSelected.push('arabic');
+        ethsSelected.push('italian');
     }
     if (eastEuropean.checked) {
-        ethsSelected.add('russian');
-        ethsSelected.add('polish');
-        ethsSelected.add('hungarian');
-        ethsSelected.add('finnish');
-        ethsSelected.add('armenian');
+        ethsSelected.push('russian');
+        ethsSelected.push('polish');
+        ethsSelected.push('hungarian');
+        ethsSelected.push('finnish');
+        ethsSelected.push('armenian');
     }
     if (european.checked) {
-        ethsSelected.add('spanish');
-        ethsSelected.add('dutch');
-        ethsSelected.add('french');
-        ethsSelected.add('gaulic');
-        ethsSelected.add('german');
-        ethsSelected.add('norse');
+        ethsSelected.push('spanish');
+        ethsSelected.push('dutch');
+        ethsSelected.push('french');
+        ethsSelected.push('gaulic');
+        ethsSelected.push('german');
+        ethsSelected.push('norse');
     }
     if (asian.checked) {
-        ethsSelected.add('chinese');
-        ethsSelected.add('japanese');
-        ethsSelected.add('mongolian');
-        ethsSelected.add('korean');
-        ethsSelected.add('indian');
+        ethsSelected.push('chinese');
+        ethsSelected.push('japanese');
+        ethsSelected.push('mongolian');
+        ethsSelected.push('korean');
+        ethsSelected.push('indian');
     }
     if (other.checked) {
-        ethsSelected.add('african');
-        ethsSelected.add('amerindian');
-        ethsSelected.add('aboriginal');
-        ethsSelected.add('hebrew');
-        ethsSelected.add('romani');
+        ethsSelected.push('african');
+        ethsSelected.push('amerindian');
+        ethsSelected.push('aboriginal');
+        ethsSelected.push('hebrew');
+        ethsSelected.push('romani');
     }
 
     //for each ethselected
